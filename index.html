@@ -1869,29 +1869,346 @@ const REPO_NAME = 'Web-Link-Manager';
 
 // Default initial dataset
 const DEFAULT_DATA = {
-  version: 3,
-  lastUpdated: Date.now(),
-  categories: [
-    { id: 'c1', name: 'Accounting', icon: '📊', color: '#4f46e5', sort: 1 },
-    { id: 'c2', name: 'Banking', icon: '🏦', color: '#0f9d72', sort: 2 },
-    { id: 'c3', name: 'Government & Tax', icon: '🏛️', color: '#d97706', sort: 3 },
-    { id: 'c4', name: 'Share Market', icon: '📈', color: '#10b981', sort: 4 },
-    { id: 'c5', name: 'Business & Payroll', icon: '💼', color: '#7c3aed', sort: 5 },
-    { id: 'c6', name: 'Career & Education', icon: '🎓', color: '#ec4899', sort: 6 },
-    { id: 'c7', name: 'Productivity Tools', icon: '🛠️', color: '#0891b2', sort: 7 }
+  "version": 4,
+  "lastUpdated": 1789225698570,
+  "categories": [
+    {
+      "id": "c3",
+      "name": "S. I. & Co.",
+      "icon": "🏛️",
+      "color": "#d97706",
+      "sort": 1
+    },
+    {
+      "id": "cat_mty09pb9pixjr",
+      "name": "GSheets",
+      "icon": "📁",
+      "color": "#ec4899",
+      "sort": 2
+    },
+    {
+      "id": "c5",
+      "name": "AI Tools",
+      "icon": "🛠️",
+      "color": "#0891b2",
+      "sort": 3
+    },
+    {
+      "id": "c4",
+      "name": "Share Market",
+      "icon": "📈",
+      "color": "#7c3aed",
+      "sort": 4
+    },
+    {
+      "id": "c2",
+      "name": "Self Developed",
+      "icon": "🏦",
+      "color": "#0f9d72",
+      "sort": 5
+    }
   ],
-  websites: [
-    { id: 'w1', name: 'QuickBooks Online', url: 'https://quickbooks.intuit.com/', categoryId: 'c1', description: 'Online cloud accounting, invoicing and financial bookkeeping', favorite: true, status: true, visits: 18, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w2', name: 'Xero Accounting', url: 'https://www.xero.com/', categoryId: 'c1', description: 'Cloud accounting platform for small business and accountants', favorite: true, status: true, visits: 14, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w3', name: 'Tally Solutions', url: 'https://tallysolutions.com/', categoryId: 'c1', description: 'Enterprise ERP, GST billing and business accounting software', favorite: false, status: true, visits: 6, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w4', name: 'Tally MeetWeb', url: 'https://meetweb.tallysolutions.com/', categoryId: 'c1', description: 'Tally web meeting and remote accounting coordination', favorite: true, status: true, visits: 12, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w5', name: 'GST Portal India', url: 'https://www.gst.gov.in/', categoryId: 'c3', description: 'Official Goods and Services Tax compliance & returns portal', favorite: true, status: true, visits: 29, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w6', name: 'GST Returns Filing', url: 'https://return.gst.gov.in/', categoryId: 'c3', description: 'Direct portal for monthly and quarterly GST returns filing', favorite: true, status: true, visits: 25, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w7', name: 'Income Tax e-Filing', url: 'https://www.incometax.gov.in/', categoryId: 'c3', description: 'Official Income Tax return e-filing and TDS management portal', favorite: true, status: true, visits: 22, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w8', name: 'MCA21 Services', url: 'https://www.mca.gov.in/', categoryId: 'c3', description: 'Ministry of Corporate Affairs company registrations and filings', favorite: false, status: true, visits: 9, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w9', name: 'AI Career Accelerator', url: 'https://app.aicareeraccelerator.in/', categoryId: 'c6', description: 'AI training platform, tutorials and professional career portal', favorite: true, status: true, visits: 16, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w10', name: 'Google Drive', url: 'https://drive.google.com/', categoryId: 'c7', description: 'Secure cloud storage, client folders and documentation', favorite: true, status: true, visits: 35, created: 1726000000000, updated: 1726000000000 },
-    { id: 'w11', name: 'Slack Workspace', url: 'https://slack.com/', categoryId: 'c5', description: 'Team messaging, updates, and client channel collaboration', favorite: false, status: true, visits: 11, created: 1726000000000, updated: 1726000000000 }
+  "websites": [
+    {
+      "id": "site_mty0mcrxjcyx2",
+      "name": "Noon Partner",
+      "url": "https://login.noon.partners/en?domain=https%3A%2F%2Fnoon-payments.noon.partners%2Fen%2Fstatements%2F%3Fproject%3DPRJ45453%26perPage%3D10%26page%3D1%26fromDate%3D2026-06-06%26toDate%3D2026-07-06%26country_code%3DAE",
+      "categoryId": "c3",
+      "description": "Noon partner & payments statement portal",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789195190829,
+      "updated": 1789195194715
+    },
+    {
+      "id": "site_mty0leucskaq5",
+      "name": "imgbb Image Upload",
+      "url": "https://imgbb.com/",
+      "categoryId": "c3",
+      "description": "Free image hosting and upload service",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789195146852,
+      "updated": 1789195149768
+    },
+    {
+      "id": "site_mty0jv3w4fqlm",
+      "name": "Noon.com",
+      "url": "https://www.noon.com/uae-en/x5-essentials-bundle-x5-camera-extra-battery-114cm-invisible-sefie-stick-lens-cap-carry-case-15m-waterproof-8k-360-action-camera-low-light-capture-wind-guard-black/ZA4B84516ADD691A23BE1Z/p/?o=c359eff5346fc3cf",
+      "categoryId": "c3",
+      "description": "Noon UAE product catalog link",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789195074620,
+      "updated": 1789195079122
+    },
+    {
+      "id": "site_mty0ix50amjte",
+      "name": "Minutes Noon",
+      "url": "https://minutes.noon.com/uae-en/now-product/ZCC8EA68A083B2983A019Z-1/",
+      "categoryId": "c3",
+      "description": "Noon Minutes quick commerce product listing",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789195030596,
+      "updated": 1789195034162
+    },
+    {
+      "id": "site_mty0hrpe2xrzl",
+      "name": "RamdanChristmasDiwali",
+      "url": "https://docs.google.com/spreadsheets/d/1IYo9jKAKJLQrAueunjiohwZSQ_UYi6stqGPmvl5KRrs/edit?gid=550316400#gid=550316400",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Ramadan, Christmas & Diwali tracking Google Sheet",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194976898,
+      "updated": 1789194976898
+    },
+    {
+      "id": "site_mty0gi8qamu0w",
+      "name": "Christmas Mugs Old",
+      "url": "https://docs.google.com/spreadsheets/d/1iwPhnfVvez58HaNFXoJlHSub_oDY5HN0/edit?gid=1089662510#gid=1089662510",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Christmas mugs old catalog Google Sheet",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194917978,
+      "updated": 1789194917978
+    },
+    {
+      "id": "site_mty0fvi4fl1hc",
+      "name": "Christmas Mugs New",
+      "url": "https://docs.google.com/spreadsheets/d/1iwPhnfVvez58HaNFXoJlHSub_oDY5HN0/edit?gid=685708635#gid=685708635",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Christmas mugs new catalog Google Sheet",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194888508,
+      "updated": 1789194888508
+    },
+    {
+      "id": "site_mty0dx1felz4d",
+      "name": "Tiffin",
+      "url": "https://docs.google.com/spreadsheets/d/1fsyUX-j02kRa380ywXY33BmgIx5HKey1BY0t7a9_Icw/edit?gid=0#gid=0",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Tiffin product details & inventory tracking sheet",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194797187,
+      "updated": 1789194801182
+    },
+    {
+      "id": "site_mty0ccuyjv46t",
+      "name": "SKU Item Master",
+      "url": "https://docs.google.com/spreadsheets/d/1oeJvCHHM_0wvloYggVhTauivaXTW9Y0D5BTn8wC7e0k/edit?gid=0#gid=0",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Master SKU inventory & product code database",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194724378,
+      "updated": 1789194727676
+    },
+    {
+      "id": "site_mty0aynhz24mp",
+      "name": "Najah Sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1uDWZae0jjR87ywp-qHl1rK_1AWSTcdCiWX0FG7bXj1w/edit?pli=1&gid=260301650#gid=260301650",
+      "categoryId": "cat_mty09pb9pixjr",
+      "description": "Najah project orders & product Google Sheet",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194659309,
+      "updated": 1789194664791
+    },
+    {
+      "id": "site_mty074h04gw7e",
+      "name": "AI Career",
+      "url": "https://app.aicareeraccelerator.in/",
+      "categoryId": "c3",
+      "description": "AI Career Accelerator professional learning portal",
+      "favorite": true,
+      "status": true,
+      "visits": 1,
+      "created": 1789194480228,
+      "updated": 1789194483940
+    },
+    {
+      "id": "site_mty03qq0x6cvi",
+      "name": "Telegram",
+      "url": "https://web.telegram.org/k/",
+      "categoryId": "c4",
+      "description": "Telegram Web messaging & market channels",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789194322440,
+      "updated": 1789194322440
+    },
+    {
+      "id": "site_mty00mkurtvuo",
+      "name": "TaxPido",
+      "url": "https://pms.taxpido.com/694b9416b43c746395a828a6/dashboard",
+      "categoryId": "c3",
+      "description": "TaxPido practice management system dashboard",
+      "favorite": true,
+      "status": true,
+      "visits": 1,
+      "created": 1789194177102,
+      "updated": 1789194196782
+    },
+    {
+      "id": "site_mtxzy9r8f5kf5",
+      "name": "Zerodha",
+      "url": "https://kite.zerodha.com/#loggedout",
+      "categoryId": "c4",
+      "description": "Kite Zerodha equity trading and portfolio portal",
+      "favorite": true,
+      "status": true,
+      "visits": 1,
+      "created": 1789194067172,
+      "updated": 1789194071371
+    },
+    {
+      "id": "site_mtxzuonlqwhd2",
+      "name": "InvoiceParserApp",
+      "url": "https://imtiahmed001-web.github.io/-InvoiceParserApp/#dashboard",
+      "categoryId": "c2",
+      "description": "In-house automated invoice parser web app",
+      "favorite": true,
+      "status": true,
+      "visits": 1,
+      "created": 1789193899857,
+      "updated": 1789193911305
+    },
+    {
+      "id": "site_mtxzt97uiebo0",
+      "name": "Product-Catalogue-Application",
+      "url": "https://imtiahmed001-web.github.io/Product-Catalogue-Application/",
+      "categoryId": "c2",
+      "description": "In-house product catalogue web app",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193833194,
+      "updated": 1789193845509
+    },
+    {
+      "id": "site_mtxzp5kbm13hb",
+      "name": "Claude",
+      "url": "https://claude.ai/new",
+      "categoryId": "c5",
+      "description": "Anthropic Claude AI chat and reasoning workspace",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193641835,
+      "updated": 1789193641835
+    },
+    {
+      "id": "site_mtxzodx0sti4r",
+      "name": "N8N",
+      "url": "https://imtiyazahmed987.app.n8n.cloud/assistant",
+      "categoryId": "c5",
+      "description": "n8n workflow automation & assistant cloud",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193606004,
+      "updated": 1789193606004
+    },
+    {
+      "id": "site_mtxznoogkaosh",
+      "name": "GitHub",
+      "url": "https://github.com/dashboard",
+      "categoryId": "c5",
+      "description": "GitHub repository and developer dashboard",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193573296,
+      "updated": 1789193573296
+    },
+    {
+      "id": "site_mtxzn1oer1gbi",
+      "name": "Google Studio",
+      "url": "https://aistudio.google.com/apps?original_referer=https:%2F%2Faccounts.google.com&project=river-wave-468215-i5",
+      "categoryId": "c5",
+      "description": "Google AI Studio API and model workspace",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193543486,
+      "updated": 1789193543486
+    },
+    {
+      "id": "site_mtxzlxawyoqhn",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "categoryId": "c5",
+      "description": "OpenAI ChatGPT conversational AI assistant",
+      "favorite": true,
+      "status": true,
+      "visits": 1,
+      "created": 1789193491160,
+      "updated": 1789193496530
+    },
+    {
+      "id": "site_mtxzky8u3b823",
+      "name": "Gemini",
+      "url": "https://gemini.google.com/app/5054667bd1517294",
+      "categoryId": "c5",
+      "description": "Google Gemini Advanced AI workspace",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193445726,
+      "updated": 1789193445726
+    },
+    {
+      "id": "site_mtxzif1vpsxc8",
+      "name": "Julius",
+      "url": "https://julius.ai/chat",
+      "categoryId": "c5",
+      "description": "Julius AI computational analysis assistant",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193327539,
+      "updated": 1789193342409
+    },
+    {
+      "id": "site_mtxzh5uncvnkh",
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/",
+      "categoryId": "c5",
+      "description": "Perplexity AI search & research engine",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193268959,
+      "updated": 1789193272283
+    },
+    {
+      "id": "site_mtxzfvbhg9xrc",
+      "name": "Manus",
+      "url": "https://manus.im/app",
+      "categoryId": "c5",
+      "description": "Manus AI autonomous agent workspace",
+      "favorite": false,
+      "status": true,
+      "visits": 1,
+      "created": 1789193208653,
+      "updated": 1789193214487
+    }
   ]
 };
 
