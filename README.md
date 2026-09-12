@@ -1,66 +1,59 @@
 # S. I. & Co. Web Link Manager & Interactive Workspace Dashboard
 
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20On-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://imtiahmed001-web.github.io/Web-Link-Manager/)
-[![Status](https://img.shields.io/badge/Live-Online-brightgreen?style=for-the-badge)](https://imtiahmed001-web.github.io/Web-Link-Manager/)
+[![Live Status](https://img.shields.io/badge/Status-Online-brightgreen?style=for-the-badge)](https://imtiahmed001-web.github.io/Web-Link-Manager/)
 
-> **Live Dashboard**: [https://imtiahmed001-web.github.io/Web-Link-Manager/](https://imtiahmed001-web.github.io/Web-Link-Manager/)
+> **Live Application**: [https://imtiahmed001-web.github.io/Web-Link-Manager/](https://imtiahmed001-web.github.io/Web-Link-Manager/)
 
-A clean, modern, and interactive single-page web link dashboard designed for accounting firms, businesses, and professionals to centralize frequently used portals, government portals (GST, Income Tax, MCA), banking, and productivity tools.
-
----
-
-## ✨ Key Features & Capabilities
-
-- 🔍 **Spotlight Command Palette (`Ctrl + K` / `⌘K`)**:
-  - Instant keyboard search across all links, domains, categories, and descriptions.
-  - Arrow key navigation with instant `Enter` key execution.
-- ⚡ **Quick Launch Shelf**:
-  - Automatically highlights your most frequently used websites based on launch analytics.
-- 🌐 **Automatic Favicon Resolution**:
-  - High-resolution real site logos fetched automatically with SVG fallbacks.
-- 📊 **Interactive Category Analytics**:
-  - Visual breakdown bars showing distribution across categories; click any category to filter.
-- 📋 **One-Click URL Copy**:
-  - Direct copy to clipboard with real-time toast feedback.
-- ★ **Favorites Hub**:
-  - Dedicated view for quick access to starred websites.
-- ☷ **Dual View Switcher**:
-  - Toggle between detailed tabular view and visual responsive card grid.
-- 🔄 **Sort & Filter Pipeline**:
-  - Sort by Most Visited, Recently Updated, Newest Added, or Alphabetical (A-Z / Z-A).
-  - Filter by Category pills or Active / Inactive status.
-- 💾 **100% Client-Side Privacy & Data Portability**:
-  - Fast persistent storage using your browser's local storage.
-  - Export full JSON backup or copy directly to clipboard.
-  - Import native JSON backups or standard browser bookmarks HTML files.
-- 🌙 **Dark & Light Mode**:
-  - High-contrast night theme with persistent preference and automatic OS theme detection.
-- 📱 **Mobile Responsive**:
-  - Sliding navigation drawer and touch-friendly controls for mobile, tablet, and desktop.
+A modern, interactive web link dashboard designed for accounting firms, businesses, and distributed teams to centralize and share frequently used portals (QuickBooks, Xero, Tally, GST, Income Tax, MCA, AI Career Accelerator, and productivity tools).
 
 ---
 
-## 🚀 Live Demo & Usage
+## 👥 How Multi-User Sharing & Live Synchronization Works
 
-Open the live dashboard directly in any modern browser:
-👉 **[https://imtiahmed001-web.github.io/Web-Link-Manager/](https://imtiahmed001-web.github.io/Web-Link-Manager/)**
+When you host on GitHub Pages, visitor browsers ordinarily isolate their edits locally. This app provides **three built-in synchronization methods** so that everyone you share the dashboard with sees the exact same updated links:
 
-### Keyboard Shortcuts
+### 1. Centralized Shared Repository (`links.json`)
+- The central dataset is stored in [`links.json`](https://github.com/imtiahmed001-web/Web-Link-Manager/blob/main/links.json) in this repository.
+- Every visitor opening [https://imtiahmed001-web.github.io/Web-Link-Manager/](https://imtiahmed001-web.github.io/Web-Link-Manager/) automatically fetches `links.json` upon launch.
+- Any update published to `links.json` becomes immediately visible to all team members and clients worldwide.
+
+### 2. In-App One-Click "Sync to Live" (GitHub API)
+- Right inside the dashboard, click **"☁️ Sync to Live"**.
+- Enter your GitHub Personal Access Token once (stored only in your browser's private storage).
+- Whenever you add, edit, or delete websites, click **"Publish Updates to GitHub Live"**. The app automatically commits the updated `links.json` directly to the repository via the GitHub REST API!
+- Within ~30 seconds, GitHub Pages automatically redeploys, and everyone sees your updates.
+
+### 3. Instant Snapshot Share Link (`#data=...`)
+- Want to share your exact current links immediately without waiting for GitHub to redeploy?
+- Click **"🔗 Share Link"** in the top bar.
+- The dashboard compresses your complete setup into the URL hash:
+  `https://imtiahmed001-web.github.io/Web-Link-Manager/#data=...`
+- Anyone who opens that link instantly loads your exact links and categories on their screen!
+
+---
+
+## ✨ Features & Capabilities
+
+- 🔍 **Spotlight Command Palette (`Ctrl + K` / `⌘K`)**: Instant fuzzy search across all websites, categories, domains, and keywords with arrow-key navigation.
+- ⚡ **Quick Launch Shelf**: Dynamic top row featuring your most frequently visited portals based on launch tracking.
+- 🌐 **Real Favicons**: Crisp site logos fetched automatically with SVG fallback avatars.
+- 📋 **One-Click URL Copy**: Copy any portal link with animated toast notification.
+- ☷ **Dual View Modes**: Switch between data-rich tabular list and visual responsive cards.
+- 🔄 **Sort & Filter**: Sort by Most Visited, Recently Updated, Newest Added, or A–Z / Z–A; filter by Category pills or Active/Inactive status.
+- 🌙 **Dark & Light Mode**: High-contrast dark theme with system preference auto-detection.
+- 💾 **Data Portability**: Full JSON export/import and browser bookmarks HTML import (Chrome/Edge/Firefox).
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
 | Shortcut | Action |
 | :--- | :--- |
 | `Ctrl + K` / `Cmd + K` | Open Spotlight Command Palette |
-| `Esc` | Close any open modal or dialog |
+| `Esc` | Close any open modal or search palette |
 | `↑` / `↓` | Navigate Command Palette results |
-| `Enter` | Launch selected website in Command Palette |
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML5 & CSS3**: Modern CSS custom properties (variables), flexbox, grid, glassmorphism accents.
-- **Vanilla JavaScript (ES6+)**: Zero external JavaScript dependencies, blazingly fast load times.
-- **Web Storage API**: Persistent local database with import/export capabilities.
-- **GitHub Pages**: Automated zero-config static site deployment.
+| `Enter` | Launch selected website |
 
 ---
 
