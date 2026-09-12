@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "lastUpdated": 1789195773810,
+  "categories": [
+    {
+      "id": "c1",
+      "name": "Accounting",
+      "icon": "📊",
+      "color": "#4f46e5",
+      "sort": 1
+    },
+    {
+      "id": "c2",
+      "name": "Banking",
+      "icon": "🏦",
+      "color": "#0f9d72",
+      "sort": 2
+    },
+    {
+      "id": "c3",
+      "name": "Government & Tax",
+      "icon": "🏛️",
+      "color": "#d97706",
+      "sort": 3
+    },
+    {
+      "id": "c4",
+      "name": "Business & Payroll",
+      "icon": "💼",
+      "color": "#7c3aed",
+      "sort": 4
+    },
+    {
+      "id": "c5",
+      "name": "Productivity Tools",
+      "icon": "🛠️",
+      "color": "#0891b2",
+      "sort": 5
+    },
+    {
+      "id": "c6",
+      "name": "Career & Education",
+      "icon": "🎓",
+      "color": "#ec4899",
+      "sort": 6
+    }
+  ],
+  "websites": [
+    {
+      "id": "w1",
+      "name": "QuickBooks Online",
+      "url": "https://quickbooks.intuit.com/",
+      "categoryId": "c1",
+      "description": "Online cloud accounting, invoicing and financial bookkeeping",
+      "favorite": true,
+      "status": true,
+      "visits": 18,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w2",
+      "name": "Xero Accounting",
+      "url": "https://www.xero.com/",
+      "categoryId": "c1",
+      "description": "Cloud accounting platform for small business and accountants",
+      "favorite": true,
+      "status": true,
+      "visits": 14,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w3",
+      "name": "Tally Solutions",
+      "url": "https://tallysolutions.com/",
+      "categoryId": "c1",
+      "description": "Enterprise ERP, GST billing and business accounting software",
+      "favorite": false,
+      "status": true,
+      "visits": 6,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w4",
+      "name": "GST Portal India",
+      "url": "https://www.gst.gov.in/",
+      "categoryId": "c3",
+      "description": "Official Goods and Services Tax compliance & returns portal",
+      "favorite": true,
+      "status": true,
+      "visits": 29,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w5",
+      "name": "Income Tax e-Filing",
+      "url": "https://www.incometax.gov.in/",
+      "categoryId": "c3",
+      "description": "Official Income Tax return e-filing and TDS management portal",
+      "favorite": true,
+      "status": true,
+      "visits": 22,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w6",
+      "name": "MCA21 Services",
+      "url": "https://www.mca.gov.in/",
+      "categoryId": "c3",
+      "description": "Ministry of Corporate Affairs company registrations and filings",
+      "favorite": false,
+      "status": true,
+      "visits": 9,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w7",
+      "name": "AI Career Accelerator",
+      "url": "https://app.aicareeraccelerator.in/",
+      "categoryId": "c6",
+      "description": "AI training platform, tutorials and professional career portal",
+      "favorite": true,
+      "status": true,
+      "visits": 16,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w8",
+      "name": "Google Drive",
+      "url": "https://drive.google.com/",
+      "categoryId": "c5",
+      "description": "Secure cloud storage, client folders and documentation",
+      "favorite": true,
+      "status": true,
+      "visits": 35,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w9",
+      "name": "Slack Workspace",
+      "url": "https://slack.com/",
+      "categoryId": "c4",
+      "description": "Team messaging, updates, and client channel collaboration",
+      "favorite": false,
+      "status": true,
+      "visits": 11,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    }
+  ]
+}
