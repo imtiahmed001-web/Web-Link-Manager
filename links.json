@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "lastUpdated": 1789195773810,
+  "version": 3,
+  "lastUpdated": 1789225237950,
   "categories": [
     {
       "id": "c1",
@@ -25,16 +25,16 @@
     },
     {
       "id": "c4",
-      "name": "Business & Payroll",
-      "icon": "💼",
-      "color": "#7c3aed",
+      "name": "Share Market",
+      "icon": "📈",
+      "color": "#10b981",
       "sort": 4
     },
     {
       "id": "c5",
-      "name": "Productivity Tools",
-      "icon": "🛠️",
-      "color": "#0891b2",
+      "name": "Business & Payroll",
+      "icon": "💼",
+      "color": "#7c3aed",
       "sort": 5
     },
     {
@@ -43,6 +43,13 @@
       "icon": "🎓",
       "color": "#ec4899",
       "sort": 6
+    },
+    {
+      "id": "c7",
+      "name": "Productivity Tools",
+      "icon": "🛠️",
+      "color": "#0891b2",
+      "sort": 7
     }
   ],
   "websites": [
@@ -84,6 +91,18 @@
     },
     {
       "id": "w4",
+      "name": "Tally MeetWeb",
+      "url": "https://meetweb.tallysolutions.com/",
+      "categoryId": "c1",
+      "description": "Tally web meeting and remote accounting coordination",
+      "favorite": true,
+      "status": true,
+      "visits": 12,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w5",
       "name": "GST Portal India",
       "url": "https://www.gst.gov.in/",
       "categoryId": "c3",
@@ -95,7 +114,19 @@
       "updated": 1726000000000
     },
     {
-      "id": "w5",
+      "id": "w6",
+      "name": "GST Returns Filing",
+      "url": "https://return.gst.gov.in/",
+      "categoryId": "c3",
+      "description": "Direct portal for monthly and quarterly GST returns filing",
+      "favorite": true,
+      "status": true,
+      "visits": 25,
+      "created": 1726000000000,
+      "updated": 1726000000000
+    },
+    {
+      "id": "w7",
       "name": "Income Tax e-Filing",
       "url": "https://www.incometax.gov.in/",
       "categoryId": "c3",
@@ -107,7 +138,7 @@
       "updated": 1726000000000
     },
     {
-      "id": "w6",
+      "id": "w8",
       "name": "MCA21 Services",
       "url": "https://www.mca.gov.in/",
       "categoryId": "c3",
@@ -119,7 +150,7 @@
       "updated": 1726000000000
     },
     {
-      "id": "w7",
+      "id": "w9",
       "name": "AI Career Accelerator",
       "url": "https://app.aicareeraccelerator.in/",
       "categoryId": "c6",
@@ -131,10 +162,10 @@
       "updated": 1726000000000
     },
     {
-      "id": "w8",
+      "id": "w10",
       "name": "Google Drive",
       "url": "https://drive.google.com/",
-      "categoryId": "c5",
+      "categoryId": "c7",
       "description": "Secure cloud storage, client folders and documentation",
       "favorite": true,
       "status": true,
@@ -143,10 +174,10 @@
       "updated": 1726000000000
     },
     {
-      "id": "w9",
+      "id": "w11",
       "name": "Slack Workspace",
       "url": "https://slack.com/",
-      "categoryId": "c4",
+      "categoryId": "c5",
       "description": "Team messaging, updates, and client channel collaboration",
       "favorite": false,
       "status": true,

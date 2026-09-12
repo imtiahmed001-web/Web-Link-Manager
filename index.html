@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S. I. &amp; Co. — Web Link Manager &amp; Workspace Dashboard</title>
   <meta name="description" content="Central interactive workspace dashboard with live cloud sync for accounting, banking, government portals, and productivity tools." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌐</text></svg>">
@@ -1451,6 +1454,14 @@
     }
 
     @media (max-width: 840px) {
+      .mobile-sync-btn {
+        display: inline-flex !important;
+        padding: 6px 9px;
+        font-size: 11.5px;
+        background: var(--primary-light);
+        color: var(--primary);
+        border: 1px solid var(--primary-border);
+      }
       .sidebar {
         transform: translateX(-100%);
       }
@@ -1585,6 +1596,7 @@
     <header class="topbar">
       <div class="topbar-left">
         <button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" title="Toggle Navigation">☰</button>
+        <button class="btn btn-sm mobile-sync-btn" onclick="forceMobileCloudSync()" title="Force Refresh from Cloud" style="display:none">🔄 Cloud</button>
         <div class="page-header">
           <h2 id="viewTitle">Dashboard</h2>
           <p id="viewSubtitle">Your central productivity hub for business portals &amp; tools.</p>
@@ -1857,26 +1869,29 @@ const REPO_NAME = 'Web-Link-Manager';
 
 // Default initial dataset
 const DEFAULT_DATA = {
-  version: 2,
+  version: 3,
   lastUpdated: Date.now(),
   categories: [
     { id: 'c1', name: 'Accounting', icon: '📊', color: '#4f46e5', sort: 1 },
     { id: 'c2', name: 'Banking', icon: '🏦', color: '#0f9d72', sort: 2 },
     { id: 'c3', name: 'Government & Tax', icon: '🏛️', color: '#d97706', sort: 3 },
-    { id: 'c4', name: 'Business & Payroll', icon: '💼', color: '#7c3aed', sort: 4 },
-    { id: 'c5', name: 'Productivity Tools', icon: '🛠️', color: '#0891b2', sort: 5 },
-    { id: 'c6', name: 'Career & Education', icon: '🎓', color: '#ec4899', sort: 6 }
+    { id: 'c4', name: 'Share Market', icon: '📈', color: '#10b981', sort: 4 },
+    { id: 'c5', name: 'Business & Payroll', icon: '💼', color: '#7c3aed', sort: 5 },
+    { id: 'c6', name: 'Career & Education', icon: '🎓', color: '#ec4899', sort: 6 },
+    { id: 'c7', name: 'Productivity Tools', icon: '🛠️', color: '#0891b2', sort: 7 }
   ],
   websites: [
-    { id: 'w1', name: 'QuickBooks Online', url: 'https://quickbooks.intuit.com/', categoryId: 'c1', description: 'Online cloud accounting, invoicing and financial bookkeeping', favorite: true, status: true, visits: 18, created: Date.now() - 86400000 * 12, updated: Date.now() - 3600000 * 2 },
-    { id: 'w2', name: 'Xero Accounting', url: 'https://www.xero.com/', categoryId: 'c1', description: 'Cloud accounting platform for small business and accountants', favorite: true, status: true, visits: 14, created: Date.now() - 86400000 * 10, updated: Date.now() - 3600000 * 5 },
-    { id: 'w3', name: 'Tally Solutions', url: 'https://tallysolutions.com/', categoryId: 'c1', description: 'Enterprise ERP, GST billing and business accounting software', favorite: false, status: true, visits: 6, created: Date.now() - 86400000 * 8, updated: Date.now() - 86400000 },
-    { id: 'w4', name: 'GST Portal India', url: 'https://www.gst.gov.in/', categoryId: 'c3', description: 'Official Goods and Services Tax compliance & returns portal', favorite: true, status: true, visits: 29, created: Date.now() - 86400000 * 15, updated: Date.now() - 1800000 },
-    { id: 'w5', name: 'Income Tax e-Filing', url: 'https://www.incometax.gov.in/', categoryId: 'c3', description: 'Official Income Tax return e-filing and TDS management portal', favorite: true, status: true, visits: 22, created: Date.now() - 86400000 * 14, updated: Date.now() - 7200000 },
-    { id: 'w6', name: 'MCA21 Services', url: 'https://www.mca.gov.in/', categoryId: 'c3', description: 'Ministry of Corporate Affairs company registrations and filings', favorite: false, status: true, visits: 9, created: Date.now() - 86400000 * 6, updated: Date.now() - 86400000 * 2 },
-    { id: 'w7', name: 'AI Career Accelerator', url: 'https://app.aicareeraccelerator.in/', categoryId: 'c6', description: 'AI training platform, tutorials and professional career portal', favorite: true, status: true, visits: 16, created: Date.now() - 86400000 * 5, updated: Date.now() - 3600000 },
-    { id: 'w8', name: 'Google Drive', url: 'https://drive.google.com/', categoryId: 'c5', description: 'Secure cloud storage, client folders and documentation', favorite: true, status: true, visits: 35, created: Date.now() - 86400000 * 20, updated: Date.now() - 900000 },
-    { id: 'w9', name: 'Slack Workspace', url: 'https://slack.com/', categoryId: 'c4', description: 'Team messaging, updates, and client channel collaboration', favorite: false, status: true, visits: 11, created: Date.now() - 86400000 * 7, updated: Date.now() - 86400000 * 3 }
+    { id: 'w1', name: 'QuickBooks Online', url: 'https://quickbooks.intuit.com/', categoryId: 'c1', description: 'Online cloud accounting, invoicing and financial bookkeeping', favorite: true, status: true, visits: 18, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w2', name: 'Xero Accounting', url: 'https://www.xero.com/', categoryId: 'c1', description: 'Cloud accounting platform for small business and accountants', favorite: true, status: true, visits: 14, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w3', name: 'Tally Solutions', url: 'https://tallysolutions.com/', categoryId: 'c1', description: 'Enterprise ERP, GST billing and business accounting software', favorite: false, status: true, visits: 6, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w4', name: 'Tally MeetWeb', url: 'https://meetweb.tallysolutions.com/', categoryId: 'c1', description: 'Tally web meeting and remote accounting coordination', favorite: true, status: true, visits: 12, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w5', name: 'GST Portal India', url: 'https://www.gst.gov.in/', categoryId: 'c3', description: 'Official Goods and Services Tax compliance & returns portal', favorite: true, status: true, visits: 29, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w6', name: 'GST Returns Filing', url: 'https://return.gst.gov.in/', categoryId: 'c3', description: 'Direct portal for monthly and quarterly GST returns filing', favorite: true, status: true, visits: 25, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w7', name: 'Income Tax e-Filing', url: 'https://www.incometax.gov.in/', categoryId: 'c3', description: 'Official Income Tax return e-filing and TDS management portal', favorite: true, status: true, visits: 22, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w8', name: 'MCA21 Services', url: 'https://www.mca.gov.in/', categoryId: 'c3', description: 'Ministry of Corporate Affairs company registrations and filings', favorite: false, status: true, visits: 9, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w9', name: 'AI Career Accelerator', url: 'https://app.aicareeraccelerator.in/', categoryId: 'c6', description: 'AI training platform, tutorials and professional career portal', favorite: true, status: true, visits: 16, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w10', name: 'Google Drive', url: 'https://drive.google.com/', categoryId: 'c7', description: 'Secure cloud storage, client folders and documentation', favorite: true, status: true, visits: 35, created: 1726000000000, updated: 1726000000000 },
+    { id: 'w11', name: 'Slack Workspace', url: 'https://slack.com/', categoryId: 'c5', description: 'Team messaging, updates, and client channel collaboration', favorite: false, status: true, visits: 11, created: 1726000000000, updated: 1726000000000 }
   ]
 };
 
@@ -1937,23 +1952,29 @@ async function initDataSync() {
 
 async function pullFromGitHub(manual = false) {
   try {
-    const resp = await fetch(`./links.json?t=${Date.now()}`);
+    const resp = await fetch(`./links.json?t=${Date.now()}`, { cache: 'no-store' });
     if (resp.ok) {
       const remoteData = await resp.json();
       if (Array.isArray(remoteData.categories) && Array.isArray(remoteData.websites)) {
-        // If user has not modified locally, or if manual refresh requested
-        const localSaved = localStorage.getItem(STORAGE_KEY);
-        if (!localSaved || manual) {
+        const hasUnpublished = localStorage.getItem('sico_has_unpublished_edits') === 'true';
+        const localVersion = appData.version || 1;
+        const remoteVersion = remoteData.version || 1;
+        
+        // Auto-upgrade if:
+        // 1. User has no unpublished manual edits on this device, OR
+        // 2. Remote version is newer, OR
+        // 3. Manual refresh was clicked
+        if (!hasUnpublished || remoteVersion > localVersion || manual) {
           appData = remoteData;
           localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+          localStorage.removeItem('sico_has_unpublished_edits');
           hasLocalUnpublishedEdits = false;
-          updateSyncIndicator('Synced with GitHub', 'success');
+          updateSyncIndicator('Synced with Cloud (v' + remoteVersion + ')', 'success');
           renderCurrentView();
-          if (manual) showToast('Refreshed from live GitHub links.json!', '☁️');
+          if (manual) showToast('Refreshed! Latest cloud links loaded.', '☁️');
           return;
         }
 
-        // If local has edits, update status
         updateSyncIndicator('Custom Local Edits', 'warning');
       }
     }
@@ -1972,9 +1993,18 @@ function updateSyncIndicator(text, type = 'success') {
   }
 }
 
+function forceMobileCloudSync() {
+  localStorage.removeItem('sico_has_unpublished_edits');
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem('sico-web-links-v1');
+  showToast('Fetching latest cloud links...', '⏳');
+  pullFromGitHub(true);
+}
+
 function saveData(notify = false, msg = 'Changes saved') {
   appData.lastUpdated = Date.now();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+  localStorage.setItem('sico_has_unpublished_edits', 'true');
   hasLocalUnpublishedEdits = true;
   updateSyncIndicator('Unpublished Changes', 'warning');
   updateBadges();
